@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+     d1 = 0;
+     d2 = 0;
+        function gamble(){
+            d1 = parseInt(Math.random() * 6);
+            d2 = parseInt(Math.random() * 6);
+            write()
+        }
+        function write(){
+            why = document.getElementById("p");
+            text = document.createTextNode("Dice 1 = "+d1);
+            why.appendChild(text);
+            text = document.createTextNode("  Dice 2 = "+d2);
+            why.appendChild(text);
+            text = document.createTextNode("  Total = "+(d1+d2));
+            why.appendChild(text);
+        }
+
+    </script>
+</head>
+<body>
+    <script type="text/javascript"></script>
+    <button onclick = "gamble();">Sate Gambling Addiction</button>
+    <p id="p">
+    </p>
+</body>
+</html>
